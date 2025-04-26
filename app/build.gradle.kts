@@ -103,12 +103,25 @@ android {
         }
     }
 
+    flavorDimensions += "device"
+
+    productFlavors {
+        create("vanilla"){
+
+        }
+
+        create("huawei") {
+            versionNameSuffix = "-hw"
+        }
+    }
+
     buildFeatures {
         buildConfig = true
         viewBinding = true
         aidl = true
         compose = true
     }
+
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_21.toString()
     }
